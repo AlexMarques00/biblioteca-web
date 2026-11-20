@@ -50,4 +50,4 @@ mvn test
 
 ## Desenvolvimento
 
-* **Desenvolvimento Individual**: Implementação completa do Backend (entidades `Autor` e `Livro`, repositórios, controllers REST e testes automatizados) e do Frontend (serviço de API, componentes de listagem/formulário e rotas).
+* **Desenvolvimento Individual - Alex Marques**: Implementação completa do Backend (entidades `Autor` e `Livro`, repositórios, controllers REST e testes automatizados) e do Frontend (serviço de API, componentes de listagem/formulário e rotas).
