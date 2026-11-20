@@ -16,3 +16,6 @@ build/
 .vscode/
 *.iml
 .DS_Store
+
+# Prints
+prints/
