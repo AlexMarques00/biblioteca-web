@@ -1,24 +1,34 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter, Routes, Route, Link, Navigate } from 'react-router-dom';
+import AutorList from './components/AutorList';
+import AutorForm from './components/AutorForm';
+import LivroList from './components/LivroList';
+import LivroForm from './components/LivroForm';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <nav className="navbar">
+        <h1>Biblioteca Web</h1>
+        <div className="nav-links">
+          <Link to="/autores">Autores</Link>
+          <Link to="/livros">Livros</Link>
+        </div>
+      </nav>
+
+      <main className="container">
+        <Routes>
+          <Route path="/" element={<Navigate to="/livros" replace />} />
+          <Route path="/autores" element={<AutorList />} />
+          <Route path="/autores/novo" element={<AutorForm />} />
+          <Route path="/autores/editar/:id" element={<AutorForm />} />
+          <Route path="/livros" element={<LivroList />} />
+          <Route path="/livros/novo" element={<LivroForm />} />
+          <Route path="/livros/editar/:id" element={<LivroForm />} />
+        </Routes>
+      </main>
+    </BrowserRouter>
   );
 }
 
